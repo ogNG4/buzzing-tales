@@ -5,7 +5,8 @@ export default function Navigation() {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
         <Link href="/">
           <span className="self-center text-4xl lg:text-5xl font-extrabold whitespace-nowrap dark:text-white  ">
-           <span className="">🐝</span>buzzing.<span className="text-amber-400">tales</span>
+            <span className="">🐝</span>buzzing.
+            <span className="text-amber-400">tales</span>
           </span>
         </Link>
         <button
@@ -47,7 +48,7 @@ export default function Navigation() {
                 className="block py-2 pl-3 pr-4 text-white text-2xl rounded md:bg-transparent md:p-0 dark:text-white"
                 aria-current="page"
               >
-               About me
+                About me
               </Link>
             </li>
           </ul>
