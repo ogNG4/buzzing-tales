@@ -74,6 +74,24 @@ export async function getPost({
   return Promise.resolve({} as Post);
 }
 
+export async function getLatestPost(): Promise<Post> {
+  try {
+    const data: any = await Promise.resolve(
+      cosmic.objects
+        .findOne({
+          type: "posts",
+        })
+        .props(["id", "type", "slug", "title", "metadata", "created_at"])
+        .sort("-created_at")
+    );
+    const latestPost = await data.object;
+    return Promise.resolve(latestPost);
+  } catch (error) {
+    console.log("Oof", error);
+  }
+  return Promise.resolve({} as Post);
+}
+
 export async function getRelatedPosts({
   params,
 }: {

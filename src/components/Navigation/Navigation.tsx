@@ -1,11 +1,11 @@
 import Link from "next/link";
 export default function Navigation() {
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900 px-5  py-2 mb-10">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <nav className="bg-white border-gray-200 dark:bg-gray-900 px-5  py-2 mb-10  ">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
         <Link href="/">
-          <span className="self-center text-4xl lg:text-5xl font-extrabold whitespace-nowrap dark:text-white">
-            🐝buzzing.<span className="text-amber-400">tales</span>
+          <span className="self-center text-4xl lg:text-5xl font-extrabold whitespace-nowrap dark:text-white  ">
+           <span className="">🐝</span>buzzing.<span className="text-amber-400">tales</span>
           </span>
         </Link>
         <button
@@ -35,10 +35,19 @@ export default function Navigation() {
             <li>
               <Link
                 href="/blog"
-                class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-amber-400 md:p-0 dark:text-white md:text-amber-400"
+                className="block py-2 pl-3 pr-4 text-white text-2xl rounded md:bg-transparent md:p-0 dark:text-white"
                 aria-current="page"
               >
                 Blog
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/about"
+                className="block py-2 pl-3 pr-4 text-white text-2xl rounded md:bg-transparent md:p-0 dark:text-white"
+                aria-current="page"
+              >
+               About me
               </Link>
             </li>
           </ul>

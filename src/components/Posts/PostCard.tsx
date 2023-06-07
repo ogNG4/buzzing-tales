@@ -5,7 +5,7 @@ import Navigation from "../Navigation/Navigation";
 
 export default function PostCard({ post }: { post: Post }) {
   return (
-    <div>
+    <div className="max-w-3xl mx-auto">
       {post.metadata.hero?.imgix_url && (
         <Link href={`/posts/${post.slug}`}>
           <Image
@@ -20,7 +20,7 @@ export default function PostCard({ post }: { post: Post }) {
           />
         </Link>
       )}
-      <h2 className="pb-3 text-xl font-semibold text-zinc-800 dark:text-zinc-200">
+      <h2 className="pb-3 text-xl font-semibold text-zinc-800 dark:text-zinc-200 ">
         <Link href={`/posts/${post.slug}`}>{post.title}</Link>
       </h2>
     </div>
