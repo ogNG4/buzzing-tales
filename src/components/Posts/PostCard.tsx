@@ -31,6 +31,11 @@ export default function PostCard({ post }: { post: Post }) {
       </div>
       <Author post={post} />
       <Teaser post={post} />
+      <Link href={`/posts/${post.slug}`}>
+        <h3 className="mt-5 text-xl font-bold text-zinc-800 dark:text-zinc-200 ">
+          Read more 👉
+        </h3>
+      </Link>
     </div>
   );
 }

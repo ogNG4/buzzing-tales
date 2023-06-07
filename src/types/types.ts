@@ -53,7 +53,3 @@ export interface Category {
   slug: string;
   title: string;
 }
-
-export interface PageTitle {
-  title: string;
-}

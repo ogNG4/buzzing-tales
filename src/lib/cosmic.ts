@@ -1,7 +1,4 @@
-import { categories } from "@/data/categories";
-import { Category, GlobalData } from "@/types/types";
-import { Post } from "@/types/types";
-import { Author } from "@/types/types";
+import { Category, GlobalData, Post, Author } from "@/types/types";
 import { createBucketClient } from "@cosmicjs/sdk";
 
 const cosmic = createBucketClient({
@@ -216,6 +213,25 @@ export async function getPostsByCategory({
     return Promise.resolve(posts);
   } catch (error) {
     console.log("Oof", error);
+  }
+  return Promise.resolve([]);
+}
+
+export async function getAllCategories(): Promise<Category[]> {
+  try {
+    const data: any = await Promise.resolve(
+      cosmic.objects
+        .find({
+          type: "categories",
+        })
+        .props("id, title, slug")
+        .depth(1)
+    );
+
+    const categories: Category[] = await data.objects;
+    return Promise.resolve(categories);
+  } catch (error) {
+    console.log("oof", error);
   }
   return Promise.resolve([]);
 }
