@@ -1,4 +1,4 @@
-import CategoryTag from "@/components/Posts/Categories/CategoryTag";
+import NavigationCategoryTag from "@/components/Navigation/NavigationCategoryTag";
 import PostCard from "@/components/Posts/PostCard";
 import SectionWrapper from "@/components/UI/SectionWrapper";
 import { getAllCategories, getAllPosts } from "@/lib/cosmic";
@@ -13,7 +13,7 @@ export default async function Blog(): Promise<JSX.Element> {
       <div className=" flex justify-center space-x-4">
         {categories &&
           categories.map((category) => (
-            <CategoryTag key={category.id} category={category} />
+            <NavigationCategoryTag key={category.id} category={category} />
           ))}
       </div>
       {posts && posts.map((post) => <PostCard key={post.id} post={post} />)}
