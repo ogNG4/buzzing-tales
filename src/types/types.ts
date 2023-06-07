@@ -1,7 +1,7 @@
-export interface Category {
-  title: string;
-  path: string;
-}
+// export interface Category {
+//   title: string;
+//   path: string;
+// }
 
 export interface GlobalData {
   metadata: {

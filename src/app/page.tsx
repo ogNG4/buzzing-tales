@@ -1,16 +1,21 @@
 import PostCard from "@/components/Posts/PostCard";
 import HomePageHero from "@/components/Home/HomePageHero";
 
-import { getLatestPost } from "@/lib/cosmic";
+import { getAllPosts, getLatestPost } from "@/lib/cosmic";
 
 export default async function Page(): Promise<JSX.Element> {
   const latestPost = await getLatestPost();
+  // const post = await getAllPosts();
 
   return (
     <>
       <main className="mx-auto mt-4 w-full  flex-col space-y-16 px-4 lg:px-0">
         <HomePageHero />
-
+        <div className="max-w-4xl mx-auto ">
+          <h2 className="text-5xl font-bold  text-zinc-700 dark:text-zinc-300 ">
+            Whats new?
+          </h2>
+        </div>
         {latestPost && <PostCard post={latestPost} />}
       </main>
     </>

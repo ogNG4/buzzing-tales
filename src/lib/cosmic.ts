@@ -83,8 +83,10 @@ export async function getLatestPost(): Promise<Post> {
         })
         .props(["id", "type", "slug", "title", "metadata", "created_at"])
         .sort("-created_at")
+        .depth(1)
     );
     const latestPost = await data.object;
+
     return Promise.resolve(latestPost);
   } catch (error) {
     console.log("Oof", error);
