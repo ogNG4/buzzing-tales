@@ -1,4 +1,5 @@
-import { GlobalData } from "@/types/types";
+import { categories } from "@/data/categories";
+import { Category, GlobalData } from "@/types/types";
 import { Post } from "@/types/types";
 import { Author } from "@/types/types";
 import { createBucketClient } from "@cosmicjs/sdk";
@@ -41,6 +42,7 @@ export async function getAllPosts(): Promise<Post[]> {
           type: "posts",
         })
         .props("id,type,slug,title,metadata,created_at")
+        .depth(1)
     );
     const posts: Post[] = await data.objects;
     return Promise.resolve(posts);
@@ -163,6 +165,55 @@ export async function getAuthorPosts({
     );
     const authorPosts: Post[] = await data.objects;
     return Promise.resolve(authorPosts);
+  } catch (error) {
+    console.log("Oof", error);
+  }
+  return Promise.resolve([]);
+}
+
+export async function getCategory({
+  params,
+}: {
+  params: { id: string; slug: string };
+}): Promise<Category> {
+  try {
+    const data: any = await Promise.resolve(
+      cosmic.objects
+        .findOne({
+          type: "categories",
+          slug: params.slug,
+        })
+        .props("id, title, slug")
+        .depth(1)
+    );
+    const category = await data.object;
+    return Promise.resolve(category);
+  } catch (error) {
+    console.log("Oof", error);
+  }
+  return Promise.resolve({} as Category);
+}
+
+export async function getPostsByCategory({
+  categoryId,
+}: {
+  categoryId: string;
+}): Promise<Post[]> {
+  try {
+    // Get all posts
+    const data: any = await Promise.resolve(
+      cosmic.objects
+        .find({
+          type: "posts",
+          "metadata.category": categoryId,
+        })
+        .props("id,type,slug,title,metadata,created_at")
+        .depth(1)
+    );
+
+    const posts: Post[] = await data.objects;
+
+    return Promise.resolve(posts);
   } catch (error) {
     console.log("Oof", error);
   }

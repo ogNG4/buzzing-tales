@@ -1,6 +1,6 @@
 import { Post } from "@/types/types";
 
-export default function Teaser({ post }: { post: Post }): JSX.Element {
+export default function Teaser({ post }: { post: Post }) {
   return (
     <h2
       dangerouslySetInnerHTML={{ __html: post.metadata.teaser ?? "" }}

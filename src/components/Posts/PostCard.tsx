@@ -4,8 +4,9 @@ import Image from "next/image";
 import Navigation from "../Navigation/Navigation";
 import Author from "./Author";
 import Teaser from "./Teaser";
+import CategoryTag from "./Categories/CategoryTag";
 
-export default function PostCard({ post }: { post: Post }): JSX.Element {
+export default function PostCard({ post }: { post: Post }) {
   return (
     <div className="max-w-4xl mx-auto bg-gray-200 dark:bg-gray-800 p-4 rounded-xl border-2 border-zinc-100 dark:border-slate-600">
       {post.metadata.hero?.imgix_url && (
@@ -22,9 +23,12 @@ export default function PostCard({ post }: { post: Post }): JSX.Element {
           />
         </Link>
       )}
-      <h2 className="pb-3 text-xl font-semibold text-zinc-800 dark:text-zinc-200 ">
-        <Link href={`/posts/${post.slug}`}>{post.title}</Link>
-      </h2>
+      <div className="flex items-center space-x-5 mb-3">
+        <h2 className=" text-xl font-semibold text-zinc-800 dark:text-zinc-200 ">
+          <Link href={`/posts/${post.slug}`}>{post.title}</Link>
+        </h2>
+        <CategoryTag post={post} />
+      </div>
       <Author post={post} />
       <Teaser post={post} />
     </div>

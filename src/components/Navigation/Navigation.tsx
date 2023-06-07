@@ -36,7 +36,7 @@ export default function Navigation() {
             <li>
               <Link
                 href="/blog"
-                className="block py-2 pl-3 pr-4 text-white text-2xl rounded md:bg-transparent md:p-0 dark:text-white"
+                className="block py-2 pl-3 pr-4 text-zinc-900 text-2xl rounded md:bg-transparent md:p-0 dark:text-white"
                 aria-current="page"
               >
                 Blog
@@ -45,7 +45,7 @@ export default function Navigation() {
             <li>
               <Link
                 href="/about"
-                className="block py-2 pl-3 pr-4 text-white text-2xl rounded md:bg-transparent md:p-0 dark:text-white"
+                className="block py-2 pl-3 pr-4 text-zinc-900  text-2xl rounded md:bg-transparent md:p-0 dark:text-white"
                 aria-current="page"
               >
                 About me

@@ -1,7 +1,7 @@
-// export interface Category {
-//   title: string;
-//   path: string;
-// }
+export interface Category {
+  title: string;
+  path: string;
+}
 
 export interface GlobalData {
   metadata: {
@@ -30,9 +30,10 @@ export interface Post {
       };
     };
     teaser: string;
-    categories: {
+    category: {
+      slug: string;
       title: string;
-    }[];
+    };
   };
 }
 
@@ -45,4 +46,14 @@ export interface Author {
       imgix_url?: string;
     };
   };
+}
+
+export interface Category {
+  id: string;
+  slug: string;
+  title: string;
+}
+
+export interface PageTitle {
+  title: string;
 }
