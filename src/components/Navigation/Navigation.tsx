@@ -53,7 +53,7 @@ export default function Navigation() {
                 className="block py-2 pl-3 pr-4 text-zinc-900 text-2xl rounded md:bg-transparent md:p-0 dark:text-white"
                 aria-current="page"
               >
-                Blog
+                blog
               </Link>
             </li>
             <li>
@@ -62,7 +62,7 @@ export default function Navigation() {
                 className="block py-2 pl-3 pr-4 text-zinc-900  text-2xl rounded md:bg-transparent md:p-0 dark:text-white"
                 aria-current="page"
               >
-                About me
+                about me
               </Link>
             </li>
           </ul>
