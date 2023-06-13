@@ -1,4 +1,5 @@
-import { getPost } from "@/lib/cosmic";
+import PostCard from "@/components/Posts/PostCard";
+import { getPost, getRelatedPosts } from "@/lib/cosmic";
 import Image from "next/image";
 
 export async function generateMetadata({
@@ -19,7 +20,7 @@ export default async function Page({
   params: { slug: string };
 }): Promise<JSX.Element> {
   const post = await getPost({ params });
-
+  const relatedPosts = await getRelatedPosts({ params });
   return (
     <main className="w-full p-5 xl:w-3/5 2xl:w-1/2  xl:p-0 mx-auto flex-col flex items-center  xl:mt-[5rem] ">
       <h2 className="text-4xl xl:text-6xl font-semibold w-full   text-zinc-800 dark:text-slate-100">
@@ -29,7 +30,7 @@ export default async function Page({
       <Image
         width={1400}
         height={600}
-        className="my-5 h-[300px] xl:h-[600px] w-full bg-no-repeat object-cover object-center rounded-lg"
+        className="my-5 h-[300px] md:h-[450px] xl:h-[600px] w-full bg-no-repeat object-cover object-center rounded-lg"
         src={`${post.metadata.hero?.imgix_url}?w=1400&auto=format`}
         priority
         alt={post.title}
@@ -39,8 +40,9 @@ export default async function Page({
       <hr className="w-full border-t border-zinc-300 pb-8 dark:border-zinc-700" />
       <div
         dangerouslySetInnerHTML={{ __html: post.metadata.content ?? "" }}
-        className="text-zinc-800 dark:text-white text-[1.3rem] lg:text-2xl"
+        className="text-zinc-800 dark:text-white text-[1.3rem] lg:text-md font-light w-full lg:w-4/5"
       ></div>
+      <div className="flex"></div>
     </main>
   );
 }

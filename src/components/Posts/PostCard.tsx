@@ -8,7 +8,7 @@ import CategoryTag from "./Categories/CategoryTag";
 
 export default function PostCard({ post }: { post: Post }) {
   return (
-    <div className="max-w-4xl mx-auto bg-gray-200 dark:bg-gray-800 p-4 rounded-xl border-2 border-zinc-100 dark:border-slate-600">
+    <div className="max-w-4xl mx-auto bg-gray-200 dark:bg-gray-900 p-4 rounded-xl border-2 border-zinc-100 dark:border-slate-600 transition-transform duration-200 ease-out hover:scale-[1.02]">
       {post.metadata.hero?.imgix_url && (
         <Link href={`/posts/${post.slug}`}>
           <Image

@@ -9,7 +9,7 @@ export default async function HomePage(): Promise<JSX.Element> {
 
   return (
     <>
-      <main className="mx-auto mt-4 w-full  flex-col space-y-16 px-4 lg:px-0">
+      <main className="mx-auto mt-4 w-full  flex-col space-y-16 px-4 pb-10 lg:px-0">
         <HomePageHero />
         <div className="max-w-4xl mx-auto ">
           <h2 className=" text-5xl lg:text-7xl w-max font-bold  text-zinc-700 dark:text-zinc-300 mx-auto lg:mx-0 ">
