@@ -5,7 +5,6 @@ import { getAllPosts, getLatestPost } from "@/lib/cosmic";
 
 export default async function HomePage(): Promise<JSX.Element> {
   const latestPost = await getLatestPost();
-  // const post = await getAllPosts();
 
   return (
     <>

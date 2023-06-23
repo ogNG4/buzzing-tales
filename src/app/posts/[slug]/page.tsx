@@ -1,4 +1,5 @@
 import PostCard from "@/components/Posts/PostCard";
+import RelatedPostCard from "@/components/Posts/RelatedPostCard";
 import { getPost, getRelatedPosts } from "@/lib/cosmic";
 import Image from "next/image";
 
@@ -42,7 +43,12 @@ export default async function Page({
         dangerouslySetInnerHTML={{ __html: post.metadata.content ?? "" }}
         className="text-zinc-800 dark:text-white text-[1.3rem] lg:text-md font-light w-full lg:w-4/5"
       ></div>
-      <div className="flex"></div>
+      <div className="flex-column lg:flex  my-20 gap-6">
+        {relatedPosts &&
+          relatedPosts
+            .slice(0, 2)
+            .map((post) => <RelatedPostCard key={post.id} post={post} />)}
+      </div>
     </main>
   );
 }
