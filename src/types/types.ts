@@ -45,6 +45,7 @@ export interface Author {
     image?: {
       imgix_url?: string;
     };
+    description: string;
   };
 }
 
