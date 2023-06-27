@@ -5,6 +5,7 @@ import { getLatestPost } from "@/lib/cosmic";
 
 export default async function HomePage(): Promise<JSX.Element> {
   const latestPost = await getLatestPost();
+
   return (
     <>
       <main className="mx-auto mt-4 w-full  flex-col space-y-16 px-4 pb-10 lg:px-0">

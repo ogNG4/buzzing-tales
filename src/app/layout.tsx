@@ -4,6 +4,8 @@ import { Inter, Work_Sans, Roboto, Poppins } from "next/font/google";
 import Navigation from "@/components/Navigation/Navigation";
 import Footer from "@/components/Navigation/Footer";
 
+import { ThemeProvider } from "@/utils/theme-provider";
+
 const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500"] });
 
 export async function generateMetadata() {
@@ -24,9 +26,11 @@ export default function RootLayout({
       <body
         className={`${poppins.className} bg-stone-50 dark:bg-gray-900  min-h-screen w-full`}
       >
-        <Navigation />
-        {children}
-        {/* <Footer/> */}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Navigation />
+          {children}
+          {/* <Footer/> */}
+        </ThemeProvider>
       </body>
     </html>
   );
