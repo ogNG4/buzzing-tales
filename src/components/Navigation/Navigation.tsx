@@ -1,8 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import ToggleButton from "../UI/ToggleButton";
-import Switcher from "../UI/Switcher";
 import { ThemeSwitcher } from "../UI/ThemeSwitcher";
 
 export default function Navigation() {
