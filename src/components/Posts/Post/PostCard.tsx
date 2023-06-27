@@ -1,10 +1,10 @@
 import { Post } from "@/types/types";
 import Link from "next/link";
 import Image from "next/image";
-import Navigation from "../Navigation/Navigation";
-import Author from "./Author";
+import Navigation from "../../Navigation/Navigation";
+import Author from "../Author/Author";
 import Teaser from "./Teaser";
-import CategoryTag from "./Categories/CategoryTag";
+import CategoryTag from "../Categories/CategoryTag";
 
 export default function PostCard({ post }: { post: Post }) {
   return (
@@ -23,7 +23,7 @@ export default function PostCard({ post }: { post: Post }) {
           />
         </Link>
       )}
-      <div className="flex items-center space-x-5 mb-3">
+      <div className="flex lg:items-center space-x-5 mb-3">
         <h2 className=" text-xl font-semibold text-zinc-800 dark:text-zinc-200 ">
           <Link href={`/posts/${post.slug}`}>{post.title}</Link>
         </h2>

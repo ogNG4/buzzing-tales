@@ -1,6 +1,7 @@
 import { Post } from "@/types/types";
 import Image from "next/image";
 import helpers from "@/helpers/dateToString";
+
 export default function Author({ post }: { post: Post }) {
   return (
     <div className="flex items-center space-x-1">

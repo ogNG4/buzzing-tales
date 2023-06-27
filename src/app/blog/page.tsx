@@ -1,5 +1,5 @@
 import NavigationCategoryTag from "@/components/Navigation/NavigationCategoryTag";
-import PostCard from "@/components/Posts/PostCard";
+import PostCard from "@/components/Posts/Post/PostCard";
 import SectionWrapper from "@/components/UI/SectionWrapper";
 import { getAllCategories, getAllPosts } from "@/lib/cosmic";
 

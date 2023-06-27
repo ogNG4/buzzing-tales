@@ -1,5 +1,5 @@
-import PostCard from "@/components/Posts/PostCard";
-import RelatedPostCard from "@/components/Posts/RelatedPostCard";
+import PostCard from "@/components/Posts/Post/PostCard";
+import RelatedPostCard from "@/components/Posts/Post/RelatedPostCard";
 import { getPost, getRelatedPosts } from "@/lib/cosmic";
 import Image from "next/image";
 

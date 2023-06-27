@@ -1,4 +1,4 @@
-import PostCard from "@/components/Posts/PostCard";
+import PostCard from "@/components/Posts/Post/PostCard";
 import SectionWrapper from "@/components/UI/SectionWrapper";
 import { getCategory, getPostsByCategory } from "@/lib/cosmic";
 import Link from "next/link";

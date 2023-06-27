@@ -132,7 +132,7 @@ export async function getAuthor({
           type: "authors",
           slug: params.slug,
         })
-        .props("id,title")
+        .props("id,title, metadata")
         .depth(1)
     );
     const author = await data.object;

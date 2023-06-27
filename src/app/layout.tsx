@@ -8,7 +8,6 @@ const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500"] });
 
 export async function generateMetadata() {
   const siteData = await getGlobalData();
-
   return {
     title: siteData.metadata.site_title,
     description: siteData.metadata.site_tag,
