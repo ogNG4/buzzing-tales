@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function AuthorCard({ author }: { author: Author }) {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-md mt-20 w-5/6 xl:w-1/3 min-h-[5rem] relative dark:text-white flex-col basis-end p-4 shadow-lg">
+    <div className="bg-white dark:bg-gray-800 rounded-md mt-20  w-5/6 xl:w-1/3 min-h-[5rem] relative dark:text-white flex-col basis-end p-4 shadow-lg">
       <Image
         src={`${author.metadata.image?.imgix_url}`}
         width={100}

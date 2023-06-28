@@ -19,7 +19,7 @@ export default function Navigation() {
     <nav className=" bg-white border-gray-200 dark:bg-gray-900 px-5  py-2 mb-10 fixed top-0 left-0 w-full z-30">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
         <Link href="/">
-          <span className="self-center text-4xl lg:text-5xl font-extrabold whitespace-nowrap dark:text-white">
+          <span className="self-center text-2xl lg:text-5xl font-extrabold whitespace-nowrap dark:text-white">
             <span className="">🐝</span>buzzing.
             <span className="text-amber-400">tales</span>
           </span>
@@ -31,16 +31,16 @@ export default function Navigation() {
           <button
             data-collapse-toggle="navbar-default"
             type="button"
-            className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            className="inline-flex items-center p-2 ml-1 text-2xl text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="navbar-default"
             aria-expanded={isOpen ? "true" : "false"}
             onClick={toggleMenu}
           >
             <span className="sr-only">Open main menu</span>
             {isOpen ? (
-              <IoMdClose className="text-3xl text-zinc-800 dark:text-white" />
+              <IoMdClose className=" text-zinc-800 dark:text-white" />
             ) : (
-              <GiHamburgerMenu className="text-3xl  text-zinc-800 dark:text-white" />
+              <GiHamburgerMenu className="  text-zinc-800 dark:text-white" />
             )}
           </button>
         </div>
@@ -65,12 +65,12 @@ export default function Navigation() {
             </li>
             <li>
               <Link
-                href="/about"
+                href="/creators"
                 className="block py-2 pl-3 pr-4 text-zinc-900  text-2xl rounded md:bg-transparent md:p-0 dark:text-white"
                 aria-current="page"
                 onClick={() => setIsOpen(false)}
               >
-                about me
+                creators
               </Link>
             </li>
           </ul>

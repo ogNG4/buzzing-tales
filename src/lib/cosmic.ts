@@ -143,6 +143,25 @@ export async function getAuthor({
   return Promise.resolve({} as Author);
 }
 
+export async function getAllAuthors(): Promise<Author[]> {
+  try {
+    const data: any = await Promise.resolve(
+      cosmic.objects
+        .find({
+          type: "authors",
+        })
+        .props("id, title, metadata")
+        .depth(1)
+    );
+    const authors: Author[] = await data.objects;
+    return Promise.resolve(authors);
+  } catch (error) {
+    console.log(error);
+  }
+
+  return Promise.resolve([]);
+}
+
 export async function getAuthorPosts({
   authorId,
 }: {
