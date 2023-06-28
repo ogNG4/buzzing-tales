@@ -1,3 +1,5 @@
+import Author from "@/components/Posts/Author/Author";
+import CategoryTag from "@/components/Posts/Categories/CategoryTag";
 import PostCard from "@/components/Posts/Post/PostCard";
 import RelatedPostCard from "@/components/Posts/Post/RelatedPostCard";
 import { getPost, getRelatedPosts } from "@/lib/cosmic";
@@ -38,7 +40,12 @@ export default async function Page({
         placeholder="blur"
         blurDataURL={`${post.metadata.hero?.imgix_url}?auto=format,compress&q=1&blur=500&w=2`}
       />
-      <hr className="w-full border-t border-zinc-300 pb-8 dark:border-zinc-700" />
+      <div className=" w-full mb-14 inline-flex justify-between ">
+        <Author post={post} />
+        <CategoryTag post={post} />
+      </div>
+      {/* <hr className="w-full border-t border-zinc-300 pb-8 dark:border-zinc-700" /> */}
+
       <div
         dangerouslySetInnerHTML={{ __html: post.metadata.content ?? "" }}
         className="text-zinc-800 dark:text-white text-[1.3rem] lg:text-md font-light w-full lg:w-4/5"
