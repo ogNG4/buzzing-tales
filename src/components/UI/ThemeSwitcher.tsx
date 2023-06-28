@@ -7,6 +7,7 @@ import { FiMoon, FiSun } from "react-icons/fi";
 export const ThemeSwitcher = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -15,6 +16,10 @@ export const ThemeSwitcher = () => {
   if (!mounted) {
     return null;
   }
+
+  const handleButtonClick = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <button

@@ -25,7 +25,7 @@ export default async function Page({
   const post = await getPost({ params });
   const relatedPosts = await getRelatedPosts({ params });
   return (
-    <main className="w-full p-5 xl:w-3/5 2xl:w-1/2  xl:p-0 mx-auto flex-col flex items-center  xl:mt-[5rem] ">
+    <main className="w-full pt-36 p-8 xl:w-3/5 2xl:w-1/2   mx-auto flex-col flex items-center   ">
       <h2 className="text-4xl xl:text-6xl font-semibold w-full   text-zinc-800 dark:text-slate-100">
         {post.title}
       </h2>
@@ -44,7 +44,6 @@ export default async function Page({
         <Author post={post} />
         <CategoryTag post={post} />
       </div>
-      {/* <hr className="w-full border-t border-zinc-300 pb-8 dark:border-zinc-700" /> */}
 
       <div
         dangerouslySetInnerHTML={{ __html: post.metadata.content ?? "" }}
