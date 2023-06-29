@@ -1,8 +1,6 @@
 import PostCard from "@/components/Posts/Post/PostCard";
 import HomePageHero from "@/components/Home/HomePageHero";
-
 import { getLatestPost } from "@/lib/cosmic";
-import Skeleton from "@/components/UI/Skeleton";
 
 export default async function HomePage(): Promise<JSX.Element> {
   const latestPost = await getLatestPost();
@@ -16,7 +14,6 @@ export default async function HomePage(): Promise<JSX.Element> {
             Whats new?
           </h2>
         </div>
-        <Skeleton />
         {latestPost && <PostCard post={latestPost} />}
       </main>
     </>

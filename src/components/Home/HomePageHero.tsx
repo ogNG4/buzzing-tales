@@ -9,7 +9,15 @@ export default function HomePageHero(): JSX.Element {
           <span className="text-amber-400"> little buzzzzing friends</span>.
         </h2>
         <div className="animate-pulse">
-          <Image src="/bee.svg" width={320} height={100} alt="Bee" />
+          <Image
+            src="/bee.svg"
+            width={320}
+            height={100}
+            alt="Bee"
+            priority
+            placeholder="blur"
+            blurDataURL="/bee.svg"
+          />
         </div>
       </div>
     </>

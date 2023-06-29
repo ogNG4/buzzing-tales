@@ -9,6 +9,8 @@ export default function AuthorCard({ author }: { author: Author }) {
         width={100}
         height={100}
         alt="hello"
+        placeholder="blur"
+        blurDataURL={`${author.metadata.image?.imgix_url}`}
         className="h-32 w-32 rounded-full border-8 border-gray-100 dark:border-gray-900 m-auto absolute top-[-4rem] left-0 right-0 ml-auto mr-auto "
       />
       <div className="mt-20 w-full flex-col flex items-center gap-5">
