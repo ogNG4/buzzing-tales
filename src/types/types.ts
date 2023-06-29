@@ -1,8 +1,3 @@
-export interface Category {
-  title: string;
-  path: string;
-}
-
 export interface GlobalData {
   metadata: {
     site_title: string;

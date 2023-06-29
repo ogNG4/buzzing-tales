@@ -49,6 +49,7 @@ export default async function Page({
         dangerouslySetInnerHTML={{ __html: post.metadata.content ?? "" }}
         className="text-zinc-800 dark:text-white text-[1.3rem] lg:text-md font-light w-full lg:w-4/5"
       ></div>
+
       <div className="flex-column lg:flex  my-20 gap-6">
         {relatedPosts &&
           relatedPosts

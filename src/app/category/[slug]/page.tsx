@@ -3,6 +3,19 @@ import SectionWrapper from "@/components/UI/SectionWrapper";
 import { getCategory, getPostsByCategory } from "@/lib/cosmic";
 import Link from "next/link";
 
+// export async function generateMetadata({
+//   params, id
+// }: {
+//   params: { slug: string }, id:{id: string};
+// }) {
+//   const category = await getCategory({ params });
+
+//   return {
+//     title: `Category: ${category.title}`,
+//     description: "category",
+//   };
+// }
+
 export default async function Category({
   params,
 }: {

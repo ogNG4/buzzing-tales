@@ -1,7 +1,6 @@
 import { Post } from "@/types/types";
 import Link from "next/link";
 import Image from "next/image";
-import Navigation from "../../Navigation/Navigation";
 import Author from "../Author/Author";
 import Teaser from "./Teaser";
 import CategoryTag from "../Categories/CategoryTag";
@@ -29,7 +28,9 @@ export default function PostCard({ post }: { post: Post }) {
         </h2>
         <CategoryTag post={post} />
       </div>
+
       <Author post={post} />
+
       <Teaser post={post} />
       <Link href={`/posts/${post.slug}`}>
         <h3 className="mt-5 text-xl font-bold text-zinc-800 dark:text-zinc-200 ">

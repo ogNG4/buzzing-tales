@@ -5,6 +5,8 @@ import Navigation from "@/components/Navigation/Navigation";
 import Footer from "@/components/Navigation/Footer";
 
 import { ThemeProvider } from "@/utils/theme-provider";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500"] });
 
@@ -28,7 +30,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navigation />
-          {children}
+          <Suspense fallback={<Loading />}>{children}</Suspense>
           {/* <Footer/> */}
         </ThemeProvider>
       </body>

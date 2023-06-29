@@ -3,9 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ThemeSwitcher } from "../UI/ThemeSwitcher";
-
 import { GiHamburgerMenu } from "react-icons/gi";
-
 import { IoMdClose } from "react-icons/io";
 
 export default function Navigation() {
