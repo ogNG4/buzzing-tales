@@ -150,7 +150,7 @@ export async function getAllAuthors(): Promise<Author[]> {
         .find({
           type: "authors",
         })
-        .props("id, title, metadata")
+        .props("id, title,slug, metadata")
         .depth(1)
     );
     const authors: Author[] = await data.objects;
