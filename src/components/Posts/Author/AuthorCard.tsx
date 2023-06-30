@@ -1,5 +1,6 @@
 import { Author } from "@/types/types";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AuthorCard({ author }: { author: Author }) {
   return (
@@ -14,9 +15,12 @@ export default function AuthorCard({ author }: { author: Author }) {
         className="h-32 w-32 rounded-full border-8 border-gray-100 dark:border-gray-900 m-auto absolute top-[-4rem] left-0 right-0 ml-auto mr-auto "
       />
       <div className="mt-20 w-full flex-col flex items-center gap-5">
-        <span className="w-max text-3xl xl:text-4xl font-bold">
+        <Link
+          className="w-max text-3xl xl:text-4xl font-bold"
+          href={`/author/${author.slug}`}
+        >
           {author.title}
-        </span>
+        </Link>
         <span className="text-lg text-center max-w-[35rem] text-gray-500 dark:text-gray-300">
           {author.metadata.description}
         </span>

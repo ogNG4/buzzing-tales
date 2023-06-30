@@ -18,7 +18,7 @@ export const ThemeSwitcher = () => {
 
   return (
     <button
-      className="text-2xl md:3xl  pt-0  md:pt-1"
+      className="text-2xl pt-1 rounded-md shadow-md p-1"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       {theme === "light" ? <FiMoon /> : <FiSun />}
