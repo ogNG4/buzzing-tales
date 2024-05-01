@@ -17,7 +17,7 @@ export default function Navigation() {
     <nav className=" bg-white border-gray-200 dark:bg-gray-900 px-5  py-2 mb-10 fixed top-0 left-0 w-full z-30">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
         <Link href="/">
-          <span className="self-center text-2xl lg:text-5xl font-extrabold whitespace-nowrap dark:text-white">
+          <span className="self-center text-2xl  font-extrabold whitespace-nowrap dark:text-white">
             <span className="">🐝</span>buzzing.
             <span className="text-amber-400">tales</span>
           </span>
@@ -54,7 +54,7 @@ export default function Navigation() {
             <li>
               <Link
                 href="/blog"
-                className="block py-2 pl-3 pr-4 text-zinc-900 text-2xl rounded md:bg-transparent md:p-0 dark:text-white"
+                className="block py-2 pl-3 pr-4 text-zinc-900 text-xl rounded md:bg-transparent md:p-0 dark:text-white"
                 aria-current="page"
                 onClick={() => setIsOpen(false)}
               >
@@ -64,7 +64,7 @@ export default function Navigation() {
             <li>
               <Link
                 href="/creators"
-                className="block py-2 pl-3 pr-4 text-zinc-900  text-2xl rounded md:bg-transparent md:p-0 dark:text-white"
+                className="block py-2 pl-3 pr-4 text-zinc-900  text-xl rounded md:bg-transparent md:p-0 dark:text-white"
                 aria-current="page"
                 onClick={() => setIsOpen(false)}
               >
